@@ -1,0 +1,30 @@
+body{
+    background-color: #f3f3f3;
+}
+
+.product_title{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.product_text{
+    padding-right: 20px;
+}
+
+.product_description{
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+}
+
+.errorlist li{
+    color: red;
+    font-weight: bold;
+}
+
+.custom_div{
+    margin-bottom: 20px !important; 
+}

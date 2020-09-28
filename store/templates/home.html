@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <img style="width: 100%" src="{% static 'img/image.jpg' %}" alt="">
+    </div>
+  </div>
+  <div class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-10 mx-auto my-2 text-center">
+          <h1 class="text-captitalze font-weight-bold">
+            All Products
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      {% for product in products %}
+      <div class="col-9 mx-auto col-md-6 col-lg-3">
+        <div class="card mb-4" style="border-color: transparent;">
+          <div class="p-4">
+            <a href="{{product.get_url}}">
+              <img src="{{product.image.url}}" class="card-img-top" alt="{{product.name}}">
+            </a>
+
+          </div>
+          <div class="card-footer d-flex justify-content-between"
+          style="background: transparent; border-color: transparent;">
+            <p class="font-weight-bold mb-0">
+              {{product.name}}
+            </p>
+            <h5 class="text-info font-italic mb-0">
+              <span class="mr-1">$</span> {{product.price}}
+            </h5>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-10 mx-auto my-2 text-center">
+      {% if products.paginator.num_pages > 1 %}
+          {% for page_number in products.paginator.page_range %}
+              <a href="?page={{page_number}}"
+               class="btn btn-light btn-sm {% if products.number == page_number %}active{% endif %}">
+               {{page_number}}</a>
+          {% endfor %}
+      {% endif %}
+    </div>
+    <br>
+  </div>
+
+
+
+{% endblock %}

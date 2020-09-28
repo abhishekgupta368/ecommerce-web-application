@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Product
+{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row mt-5">
+    <div class="col-10 mx-auto col-md-6 my-3">
+      <img src="{{product.image.url}}" alt="">
+    </div>
+    <div class="col-10 mx-auto col-md-6 my-3">
+      <div>
+        <h1 class="product_title">{{product.name}}</h1>
+        <h5 class="text-info font-italic mb-3">
+          <span class="mr-1">$</span> {{product.price}}
+        </h5>
+        <p class="product_description">Product Description</p>
+        <p class="text-justify product_text">{{product.description}}</p>
+        {% if product.stock <= 0 %}
+        <p class="text-justify product_text"><b>Out of Stock</b></p>
+        {% else %}
+        <a href="{% url 'add_cart' product.id %}">
+          <button type="button" name="button" class="btn btn-secondary">
+            Add to Cart
+          </button>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+  <div class="card-header">
+    <h4>Reviews</h4>
+  </div>
+  {% if user.is_authenticated %}
+  <div class="card-body">
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <textarea name="content" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+      <button type="submit" class="btn btn-success">Post</button>
+      </div>
+    </form>
+  </div>
+  {% endif %}
+
+  {% if reviews.count > 0 %}
+  <ul class="list-group list-group-flush">
+   {% for review in reviews %}
+       <li class="list-group-item"> <h5>{{review.user.username}}</h5>
+       <p class="card-text">{{review.content}}</p>
+       </li>
+   {% endfor %}
+ </ul>
+
+  {% endif %}
+
+
+</div>
+
+</div>
+
+
+{% endblock %}
