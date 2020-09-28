@@ -1,0 +1,17 @@
+Django==3.0.3
+django-bootstrap-datepicker-plus==3.0.5
+django-crispy-forms==1.9.0
+django-heroku==0.3.1
+requests==2.21.0
+gunicorn==20.0.4
+backports.os==0.1.1
+backports.shutil-get-terminal-size==1.0.0
+beautifulsoup4==4.8.2
+ipython==7.4.0
+ipython-genutils==0.2.0
+mysql==0.0.2
+mysql-connector-python==8.0.19
+mysqlclient==1.4.6
+numpy==1.16.2
+pandas==0.24.2
+djangorestframework==3.11.0
