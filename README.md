@@ -1,22 +1,25 @@
-# Description
-1. This web application used for sellig goods online. 
-2. User can add, remove and buy good online and also contains realtime payment system(Strips API). 
-3. This system can also genrate the PDF of bill for user and mail of order will be sent to the user using mailgun API
+# Ecommerce Web Application
 
-# Setup the application
-1. create an virtual environment and install django with its all dependency.
+* This web application used for sellig goods online. 
+* User can add, remove and buy good online and also contains realtime payment system(Strips API). 
+* This system can also genrate the PDF of bill for user and mail of order will be sent to the user using mailgun API
+
+## Setup & Installation
+
+1. create an virtual environment with `python3.x` and install django with its all dependency.
 2. clone the web application in your system.
 3. setup database using command given below
-```
->> python manage.py makemigrations
->> python manage.py migrate
-```
-4. run application using command given below
-```
->> python manage.py runserver
+
+```bash
+$ python manage.py makemigrations
+$ python manage.py migrate
 ```
 
-ScreenShots:
+4. run application using command given below
+
+```bash
+$ python manage.py runserver
+```
 
 ![cap1](https://user-images.githubusercontent.com/39022530/94400331-8f847480-0186-11eb-956e-337066193f74.PNG)
 ![cap2](https://user-images.githubusercontent.com/39022530/94400334-90b5a180-0186-11eb-9fcd-44d9ca1ef85d.PNG)
