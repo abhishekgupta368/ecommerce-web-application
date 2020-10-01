@@ -1,8 +1,9 @@
 # Ecommerce Web Application
 
-* This web application used for sellig goods online. 
-* User can add, remove and buy good online and also contains realtime payment system(Strips API). 
-* This system can also genrate the PDF of bill for user and mail of order will be sent to the user using mailgun API
+* This web application is used for selling goods online. 
+* User can add, remove and buy good online and also contains realtime payment system (Strips API). 
+* This system can also generate the PDF of bill for user 
+* Mail of order will be sent to the user using mailgun API
 
 ## Setup & Installation
 
