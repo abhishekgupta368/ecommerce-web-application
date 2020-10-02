@@ -7,9 +7,10 @@
 
 ## Setup & Installation
 
-1. create an virtual environment with `python3.x` and install django with its all dependency.
-2. clone the web application in your system.
-3. setup database using command given below
+1. Ensure that you have `mysql` and `postgresql` installed and in your path
+2. create an virtual environment with `python3.x` and install django with its all dependency.
+3. clone the web application in your system.
+4. setup database using command given below
 
 ```bash
 $ python manage.py makemigrations
