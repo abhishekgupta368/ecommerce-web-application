@@ -1,14 +1,16 @@
 # Ecommerce Web Application
 
-* This web application used for sellig goods online. 
-* User can add, remove and buy good online and also contains realtime payment system(Strips API). 
-* This system can also genrate the PDF of bill for user and mail of order will be sent to the user using mailgun API
+* This web application is used for selling goods online. 
+* User can add, remove and buy good online and also contains realtime payment system (Strips API). 
+* This system can also generate the PDF of bill for user 
+* Mail of order will be sent to the user using mailgun API
 
 ## Setup & Installation
 
-1. create an virtual environment with `python3.x` and install django with its all dependency.
-2. clone the web application in your system.
-3. setup database using command given below
+1. Ensure that you have `mysql` and `postgresql` installed and in your path
+2. create an virtual environment with `python3.x` and install django with its all dependency.
+3. clone the web application in your system.
+4. setup database using command given below
 
 ```bash
 $ python manage.py makemigrations
